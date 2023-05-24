@@ -43,6 +43,20 @@ app.get('/magic/:question', (req,res) => {
     //use %20 as spaces in URL
 })
 
+app.get('/fibonnaci/:num', (req,res) => {
+    let num = parseInt(req.params.num)
+    let previousNum = num -1
+    let theOneBeforePreviousNum = previousNum -1
+    let sumOfPreviouses = previousNum + theOneBeforePreviousNum
+    if(sumOfPreviouses === num || num === 0 || num === 1 || num === 2 || num === 5){
+        res.send(`<h1>Very good. It is Fibonacci</h1>`)
+    } else {
+        res.send(`<h1>I can tell this is not a fibonacci number</h1>`)
+    }
+
+
+})
+
 function getRandoInt(range){
     return Math.floor(Math.random()*range)
 }
