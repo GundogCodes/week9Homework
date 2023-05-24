@@ -16,6 +16,18 @@ app.get('/greeting/:name',(req,res) => {
     res.send(`<h1>${message}${name}!</h1>`)
 })
 
+app.get('/tip/:total/:tipPercentage', (req,res) => {
+    let total = parseInt(req.params.total)
+    let tipPercentage = parseInt(req.params.tipPercentage)
+    let tipAmount  = total*(parseFloat(`0.${tipPercentage}`))
+    res.send(`<h1>
+    Your total is: ${total} <br>
+    Your tip Percentage is: ${tipPercentage}% <br>
+    Your tip Amount is: ${tipAmount}
+    </h1>`)
+
+})
+
 function getRandoInt(range){
     return Math.floor(Math.random()*range)
 }
