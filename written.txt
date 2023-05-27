@@ -35,14 +35,14 @@ FeedBack:
 
 Hey Nick, the game is awesome and works great! When I first saw your presentation I became super curious to how
 you did the functionality of the game as it seemed simple at first but as I began to think about how I would
-implement functionality a lot of questions popped up in my head so I reallu wanted to see how you made it work.
+implement functionality a lot of questions popped up in my head so I really wanted to see how you made it work.
 I really appreciated how you commented your thought process it made it really easy for me to see what was going on.
-I see you used canvas and its method alot in this project which is something I had no idea about but I can see how
+I see you used canvas and its methods alot in this project which is something I had no idea about but I can see how
 it is super useful and something I will have to look into for further research. So all in all great job! I ended up spending
 quite a bit of time just playing the game for fun lol. There are some things I think you could work on; it looks like there 
 were some additonal functionality you wanted add such as a model,a highscore board and difficulty level but couldnt 
 or didn't get the time so I would like to see how you would add such things as well. For a model or starting/ending screen,
-Something I learned in my project was how to create a div with its own complex HTML and append to the body of the page on which 
+Something I learned in my project was how to create a div with its own complex HTML & styling and append to the body of the page on which 
 you could let the user choose their difficulty and then once that selection is made, remove the div and run the game. For a highscore
 board you could also ask the user to enter their name and then would need to do some backend stuff to create a database of the scores
 (which is something we are learning now!). Furthermore, you could use similar logic to create an end screen too if you wanted as the game 
@@ -52,7 +52,8 @@ way much better? I am also curious as to why you chose a setTimeout in the init 
 which I imagine could work similarly. There is also one bug I have noticed that when you press the key
 opposite to the direction that snake is moving the game ends, I see that you have put in a prevention to this in the change_direction function
 but it doesnt seem to work fully as it is. Finally, one other thing I would like to recomend is just to structure the code in a more seperated way
-creating comment headers for all you constants, state variables, cached elements, eventlisteners and functions, just helps the reader (and yourslef)read the code 
+creating comment headers for all you constants, state variables, cached elements, eventlisteners and functions, just helps the reader (and yourself)read the code 
 a bit more clearly. But thats about it I really enjoyed reading your code and getting a view into your head and your thought process it was
 pretty cool! You have a great understanding about this stuff and it shows, best of luck for you future projects! If you ever wanna reach out
 for something, feel free and I can do the same to you!
+Gunish
