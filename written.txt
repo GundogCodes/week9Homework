@@ -1,0 +1,58 @@
+Code Selection: Snake_3-the_snakening by Nick Daly
+https://ndaly94.github.io/snake_3-the_snakening/
+
+What the Code is Doing:
+We have script, HTML, and CSS files, we know what they do. Some images and sounds files are also in the project.
+
+Taking a look at the HTML, we have a standard head tag, and the body tag. In the body tag, an unordered list 
+includes a home list item, a difficulty list item with its own unordered list of a dropdown class with items,
+that select the easy, medium, hard difficulty. A high scores, and credits list items are also listed. This elements
+are then styled in a horizontal and colorful fashion in CSS. There is a logo and title header and a div for the player 
+score, the contants of which will change as the game is played. Below this section is where the main game takes place.
+Nick is uses a canvas tag that creates a board with a specified height and width that the canvas tag will draw on to 
+the page.
+
+Looking at the JS, we can see the mechanics of the game, the constants define the colors of the board and snake
+and their borders. Then the state variables are defined, the inital starting coordinates of each piece of the 
+snake initally there are 4. The score is set to 0. A changing_direction variable is initalized to false which 
+tracks the moving direction of the snake. And finally, empty x & y coordinate varibles are initalized along with
+the x & y velocity variables specify the speed at which the snake will move in their respective directions. x is
+initally set to 20 so the snake moves right 20 every time the board is rendered.The cached elements are defined,
+of which we have only one, the snake board and canvas requires a setContext method on the cached element which
+tells javascript to make the board 2d. These are all set in the global scope.
+
+3 functions start the game, init, render_food, and a keydown eventlistener which calls a change_direction function.
+render_food creates a rectangle at the food_x & food_y (from the global scope) with its specfied colors. The change_direction
+function checks takes in the event parameter and first checks which key is pressed. Based off that info, we first
+we move the velocity of the snake accordingly. The init function checks every 100ms by having a setTimeout for 100ms
+but calls it self each time the function is run. The function calls the has_game_ended, clearBoard, renderFood, 
+move_Snake, and render_Snake. The has_game_ended function checks if the snake has intercepted itself or if it has 
+hit the walls of the board. and returns true if any of those conditions are met. moveSnake increments the snake position
+according to the velocities set and manipulated in the eventlistener and if the the position of the snake head collides
+with the positon of the food we add a new rectangle (head) to our snake and update the points and render food again.
+
+FeedBack:
+
+Hey Nick, the game is awesome and works great! When I first saw your presentation I became super curious to how
+you did the functionality of the game as it seemed simple at first but as I began to think about how I would
+implement functionality a lot of questions popped up in my head so I reallu wanted to see how you made it work.
+I really appreciated how you commented your thought process it made it really easy for me to see what was going on.
+I see you used canvas and its method alot in this project which is something I had no idea about but I can see how
+it is super useful and something I will have to look into for further research. So all in all great job! I ended up spending
+quite a bit of time just playing the game for fun lol. There are some things I think you could work on; it looks like there 
+were some additonal functionality you wanted add such as a model,a highscore board and difficulty level but couldnt 
+or didn't get the time so I would like to see how you would add such things as well. For a model or starting/ending screen,
+Something I learned in my project was how to create a div with its own complex HTML and append to the body of the page on which 
+you could let the user choose their difficulty and then once that selection is made, remove the div and run the game. For a highscore
+board you could also ask the user to enter their name and then would need to do some backend stuff to create a database of the scores
+(which is something we are learning now!). Furthermore, you could use similar logic to create an end screen too if you wanted as the game 
+just halts right now and the only way to restart is to refresh the page. I was initally thinking about using a class for the snake and having
+all the functionality of the snake in that class as methods, is that something you thought of and tried as well? Did it work or if not was this
+way much better? I am also curious as to why you chose a setTimeout in the init function that calls itself every 100ms rather than a setInterval
+which I imagine could work similarly. There is also one bug I have noticed that when you press the key
+opposite to the direction that snake is moving the game ends, I see that you have put in a prevention to this in the change_direction function
+but it doesnt seem to work fully as it is. Finally, one other thing I would like to recomend is just to structure the code in a more seperated way
+creating comment headers for all you constants, state variables, cached elements, eventlisteners and functions, just helps the reader (and yourslef)read the code 
+a bit more clearly. But thats about it I really enjoyed reading your code and getting a view into your head and your thought process it was
+pretty cool! You have a great understanding about this stuff and it shows, best of luck for you future projects! If you ever wanna reach out
+for something, feel free and I can do the same to you!
